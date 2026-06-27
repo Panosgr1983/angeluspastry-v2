@@ -31,7 +31,11 @@ export function ProductsByCategory() {
 
     // Scroll to the content area (description + grid) smoothly
     setTimeout(() => {
-      contentRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const el = contentRef.current;
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
     }, 50);
   };
 
