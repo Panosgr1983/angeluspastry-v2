@@ -33,7 +33,7 @@ export function ProductsByCategory() {
     setTimeout(() => {
       const el = contentRef.current;
       if (el) {
-        const top = el.getBoundingClientRect().top + window.scrollY - 160;
+        const top = el.getBoundingClientRect().top + window.scrollY - 200;
         window.scrollTo({ top, behavior: 'smooth' });
       }
     }, 50);
